@@ -9,7 +9,6 @@ import java.net.InetSocketAddress;
 public class Main {
     public static HttpServer server;
     public static void main(String[] args) throws IOException {
-        ShortenerService.addURLS("https://www.youtube.com/","test");
         server = HttpServer.create(new InetSocketAddress(8080), 0);
 
         server.createContext("/", exchange -> {
